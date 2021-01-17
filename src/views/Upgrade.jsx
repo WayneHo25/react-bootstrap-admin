@@ -16,7 +16,7 @@
 
 */
 import React, { Component } from "react";
-import { Table, Grid, Row, Col } from "react-bootstrap";
+import { Table, Container, Row, Col } from "react-bootstrap";
 
 import Card from "components/Card/Card";
 
@@ -26,7 +26,7 @@ class Icons extends Component {
   render() {
     return (
       <div className="content">
-        <Grid fluid>
+        <Container fluid>
           <Row>
             <Col md={8} mdOffset={2}>
               <Card
@@ -92,7 +92,7 @@ class Icons extends Component {
                             round
                             fill
                             disabled
-                            bsStyle="default"
+                            variant="default"
                           >
                             Current Version
                           </Button>
@@ -103,7 +103,7 @@ class Icons extends Component {
                             href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react/?ref=lbdr-upgrade-page"
                             round
                             fill
-                            bsStyle="info"
+                            variant="info"
                           >
                             Upgrade to PRO
                           </Button>
@@ -115,7 +115,7 @@ class Icons extends Component {
               />
             </Col>
           </Row>
-        </Grid>
+        </Container>
       </div>
     );
   }

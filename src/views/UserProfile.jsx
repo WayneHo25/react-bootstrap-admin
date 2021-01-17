@@ -17,11 +17,11 @@
 */
 import React, { Component } from "react";
 import {
-  Grid,
+  Container,
   Row,
   Col,
   FormGroup,
-  ControlLabel,
+  FormLabel,
   FormControl
 } from "react-bootstrap";
 
@@ -36,7 +36,7 @@ class UserProfile extends Component {
   render() {
     return (
       <div className="content">
-        <Grid fluid>
+        <Container fluid>
           <Row>
             <Col md={8}>
               <Card
@@ -49,7 +49,7 @@ class UserProfile extends Component {
                         {
                           label: "Company (disabled)",
                           type: "text",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "Company",
                           defaultValue: "Creative Code Inc.",
                           disabled: true
@@ -57,14 +57,14 @@ class UserProfile extends Component {
                         {
                           label: "Username",
                           type: "text",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "Username",
                           defaultValue: "michael23"
                         },
                         {
                           label: "Email address",
                           type: "email",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "Email"
                         }
                       ]}
@@ -75,14 +75,14 @@ class UserProfile extends Component {
                         {
                           label: "First name",
                           type: "text",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "First name",
                           defaultValue: "Mike"
                         },
                         {
                           label: "Last name",
                           type: "text",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "Last name",
                           defaultValue: "Andrew"
                         }
@@ -94,7 +94,7 @@ class UserProfile extends Component {
                         {
                           label: "Adress",
                           type: "text",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "Home Adress",
                           defaultValue:
                             "Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
@@ -107,21 +107,21 @@ class UserProfile extends Component {
                         {
                           label: "City",
                           type: "text",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "City",
                           defaultValue: "Mike"
                         },
                         {
                           label: "Country",
                           type: "text",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "Country",
                           defaultValue: "Andrew"
                         },
                         {
                           label: "Postal Code",
                           type: "number",
-                          bsClass: "form-control",
+                          bsPrefix: "form-control",
                           placeholder: "ZIP Code"
                         }
                       ]}
@@ -130,18 +130,18 @@ class UserProfile extends Component {
                     <Row>
                       <Col md={12}>
                         <FormGroup controlId="formControlsTextarea">
-                          <ControlLabel>About Me</ControlLabel>
+                          <FormLabel>About Me</FormLabel>
                           <FormControl
                             rows="5"
-                            componentClass="textarea"
-                            bsClass="form-control"
+                            as="textarea"
+                            bsPrefix="form-control"
                             placeholder="Here can be your description"
                             defaultValue="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
                           />
                         </FormGroup>
                       </Col>
                     </Row>
-                    <Button bsStyle="info" pullRight fill type="submit">
+                    <Button variant="info" pullRight fill type="submit">
                       Update Profile
                     </Button>
                     <div className="clearfix" />
@@ -180,7 +180,7 @@ class UserProfile extends Component {
               />
             </Col>
           </Row>
-        </Grid>
+        </Container>
       </div>
     );
   }

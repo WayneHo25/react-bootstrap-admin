@@ -25,20 +25,20 @@ class Header extends Component {
     super(props);
     this.mobileSidebarToggle = this.mobileSidebarToggle.bind(this);
     this.state = {
-      sidebarExists: false
+      sidebarExists: false,
     };
   }
   mobileSidebarToggle(e) {
     if (this.state.sidebarExists === false) {
       this.setState({
-        sidebarExists: true
+        sidebarExists: true,
       });
     }
     e.preventDefault();
     document.documentElement.classList.toggle("nav-open");
     var node = document.createElement("div");
     node.id = "bodyClick";
-    node.onclick = function() {
+    node.onclick = function () {
       this.parentElement.removeChild(this);
       document.documentElement.classList.toggle("nav-open");
     };
@@ -46,13 +46,11 @@ class Header extends Component {
   }
   render() {
     return (
-      <Navbar fluid>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="#pablo">{this.props.brandText}</a>
-          </Navbar.Brand>
-          <Navbar.Toggle onClick={this.mobileSidebarToggle} />
-        </Navbar.Header>
+      <Navbar>
+        <Navbar.Brand>
+          <a href="#pablo">{this.props.brandText}</a>
+        </Navbar.Brand>
+        <Navbar.Toggle onClick={this.mobileSidebarToggle} />
         <Navbar.Collapse>
           <AdminNavbarLinks />
         </Navbar.Collapse>
